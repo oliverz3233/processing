@@ -66,12 +66,12 @@ def generate_features(implementation_version, draw_graphs, raw_data, axes, sampl
             frame_stride=frame_stride,
             zero_padding=False)
 
-        if (numframes < 1):
+        '''if (numframes < 1):
             raise ConfigurationError('Frame length is larger than your window size')
 
         if (numframes > 500):
             raise ConfigurationError('Number of frames is larger than 500 (' + str(numframes) + '), ' +
-                'increase your frame stride or decrease your window size.')
+                'increase your frame stride or decrease your window size.')'''
         ############# Extract MFCC features #############
         use_old_mels = True if implementation_version <= 3 else False
         mfe, _, filterbank_freqs, filterbank_matrix = speechpy.feature.mfe(signal, sampling_frequency=fs, implementation_version=implementation_version,
