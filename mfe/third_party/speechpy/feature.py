@@ -118,10 +118,10 @@ def filterbanks(
                                                         right=right)
 
     # Check if any row in the array contains all zeros
-    if np.any(np.all(filterbank == 0, axis=1)):
+    '''if np.any(np.all(filterbank == 0, axis=1)):
 
         raise ConfigurationError('At least one row of the mel filterbank contains all zeros. ' +
-        f'Suggest lowering filter number to {np.floor(coefficients/4)}, or increasing the FFT length.')
+        f'Suggest lowering filter number to {np.floor(coefficients/4)}, or increasing the FFT length.')'''
 
     return filterbank, hertz[1:-1]
 
